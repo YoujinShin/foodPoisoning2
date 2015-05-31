@@ -1,5 +1,5 @@
-var width = 1400,
-    height = 600,
+var width = $(window).width(),
+    height = 570,
     padding = 3, // separation between nodes
     maxRadius = 12;
 
@@ -7,7 +7,7 @@ var tooltip = d3.select("body")
   .append("div")
   .attr("id", "tooltip");
 
-var svg = d3.select("body").append("svg")
+var svg = d3.select("#viz").append("svg")
     .attr("width", width)
     .attr("height", height);
 
@@ -22,7 +22,7 @@ function makeViz(error, foodType, foodFactor) {
 
   var x = d3.scale.linear()
     .domain([0,8])
-    .range([100, width - 100]);
+    .range([100, width - 180]);
 
   num = foodType.length;
 
