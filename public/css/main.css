@@ -14,24 +14,24 @@ body {
 
 hr {
 	position: absolute;
-    width: 295px;
+    width: 320px;
 	z-index: 20;
 	left: 0px;
-	bottom: 130px;
+	bottom: 122px;
 	/*border-style: 0.5px;*/
 	color: rgba(72,194,244,1) !important;
-	height: 0.8px;
+	height: 0.6px;
 	background-color: rgba(72,194,244,1);
 	border: none;
 }
 
 h1 {
 	font-family: 'Helvetica', sans-serif;
-	padding-left: 50px;
+	padding-left: 80px;
 	position: absolute;
 	color: white;
-	bottom: 92px;
-	font-size: 16px;
+	bottom: 88px;
+	font-size: 15px;
 	letter-spacing:6px;
 	font-weight: bold;
 }
@@ -40,23 +40,23 @@ h1 {
 	font-family: 'HelveticaNeue', sans-serif;
 	width: 40%;
 	padding-right: 20px;
-	padding-left: 50px;
+	padding-left: 80px;
 	position: absolute;
-	color: rgba(255,255,255,0.6);
+	color: rgba(255,255,255,0.45);
 	bottom: 30px;
 	letter-spacing: 1px;
 	padding-bottom: 20px;
-	font-size: 13px;
+	font-size: 12px;
 	line-height: 160%;
 }
 
 .bttn {
 	font-family: 'Helvetica', sans-serif;
 	letter-spacing: 1px;
-	width: 80px;
-	height: 80px;
+	width: 76px;
+	height: 76px;
 
-	background-color: rgba(255,255,255,0.1);
+	background-color: rgba(255,255,255,0);
 	border-radius: 40px;
 	font-weight: lighter;
 
@@ -64,24 +64,57 @@ h1 {
 	color: rgba(255,255,255,1);
 
 	letter-spacing: 1px;
-	font-size: 10px;
-	line-height: 180%;
+	font-size: 9px;
+	line-height: 186%;
 
 	text-align: center;
 
-	margin-top: auto;
-	margin-bottom: auto;
-	/*vertical-align: middle;*/
+	margin-bottom: 0px;
+	border: solid 1px rgba(255,255,255,0.5);
+	/*border: solid 2px rgba(72,194,244,0);*/
+}
+
+.bttn:hover {
+	border: solid 1px rgba(72,194,244,1);
 }
 
 .strong {
 	font-weight: bold;
 }
 
+/*button*/
 .cuisine {
 	position: absolute;
-	right: 50px;
+	/*right: 295px;*/
+	right: 220px;
 	bottom: 50px;
+	border: solid 1px rgba(72,194,244,1);
+	z-index: 20;
+}
+
+.foodtype {
+	position: absolute;
+	/*right: 195px;*/
+	right: 120px;
+	bottom: 50px;
+	z-index: 20;
+}
+
+.factor {
+	position: absolute;
+	right: 100px;
+	bottom: 50px;
+	z-index: 20;
+}
+
+.bg {
+	position: absolute;
+	right: 80px;
+	bottom: 50px;
+	width: 295px;
+	height: 90px;
+	background-color: rgba(255,255,255,0.06);
+	border-radius: 10px;
 }
 
 circle {
@@ -94,7 +127,7 @@ circle {
 	position: absolute; 
 	text-align: center;
 	padding: 8px;       
-	font-size: 12px;
+	font-size: 11px;
 	border: 1px;
 	border-radius: 4px;
 	pointer-events: none;
@@ -102,4 +135,29 @@ circle {
 	color: #fff;
 	background-color: rgba(0,0,0,0.8);
 	visibility: hidden;
+}
+
+.guide_cuisine {
+	color: white;
+	fill: rgba(255,255,255,0.4);
+	stroke: none;
+	font-family: 'Helvetica', sans-serif;
+	font-size: 10px;
+	letter-spacing: 1px;
+	text-align: center;
+}
+
+.guide_foodtype {
+	color: white;
+	fill: rgba(255,255,255,0.4);
+	stroke: none;
+	font-family: 'Helvetica', sans-serif;
+	font-size: 10px;
+	letter-spacing: 1px;
+	text-align: center;
+	visibility: hidden;
+}
+
+.line {
+	
 }
