@@ -141,18 +141,18 @@ circle {
 	color: white;
 	fill: rgba(255,255,255,0.4);
 	stroke: none;
-	font-family: 'Helvetica', sans-serif;
-	font-size: 10px;
+	font-family: 'HelveticaNeue', sans-serif;
+	font-size: 12px;
 	letter-spacing: 1px;
 	text-align: center;
 }
 
 .guide_foodtype {
 	color: white;
-	fill: rgba(255,255,255,0.4);
+	fill: rgba(255,255,255,0.5);
 	stroke: none;
-	font-family: 'Helvetica', sans-serif;
-	font-size: 10px;
+	font-family: 'HelveticaNeue', sans-serif;
+	font-size: 12px;
 	letter-spacing: 1px;
 	text-align: center;
 	visibility: hidden;
@@ -161,3 +161,8 @@ circle {
 .line {
 	
 }
+
+.line2 {
+	visibility: hidden;
+}
+

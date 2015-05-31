@@ -44,11 +44,14 @@ var x2 = d3.scale.linear()
 var y2 = d3.scale.linear()
   .domain([0,1])
   // .range([170, height-170]);
-  .range([height*0.28, height*0.65]);
+  .range([height*0.32, height*0.75]);
 
 
 // Make Visualization
 function makeViz(error, foodType, foodFactor) {
+    // Guide
+  makeGuide_cuisine();
+  makeGuide_foodtype();
 
   num = foodType.length;
 
@@ -99,9 +102,9 @@ function makeViz(error, foodType, foodFactor) {
       })
       .call(force.drag);
 
-  // Guide
-  makeGuide_cuisine();
-  makeGuide_foodtype();
+  // // Guide
+  // makeGuide_cuisine();
+  // makeGuide_foodtype();
 }
 
 function tick(e) {
@@ -231,7 +234,7 @@ function makeGuide_cuisine() {
       .attr("stroke", "rgba(255,255,255,0.32)")
       .style("stroke-dasharray", ("1, 3")) 
       .attr("x1", function(d) { return  x( getX(d) ); })
-      .attr("y1", function(d) { return height*0.23; })
+      .attr("y1", function(d) { return height*0.21; })
       .attr("x2", function(d) { return  x( getX(d) ); })
       .attr("y2", function(d) { return height*0.5; });
 }
@@ -248,18 +251,18 @@ function makeGuide_foodtype() {
       })
       .attr("text-anchor", "middle")
       .attr("x", function(d) { return x2(getX2(d)); })
-      .attr("y", function(d) { return y2(getY2(d)) - 35; });
+      .attr("y", function(d) { return y2(getY2(d)) - 95; });
 
-  // line_foodtype = svg.selectAll("line")
-  //     .data(text_cuisine)
-  //   .enter().append("line")
-  //     .attr("class", "line")
-  //     .attr("stroke", "rgba(255,255,255,0.35)")
-  //     .style("stroke-dasharray", ("1, 3")) 
-  //     .attr("x1", function(d) { return  x( getX(d) ); })
-  //     .attr("y1", function(d) { return height*0.23; })
-  //     .attr("x2", function(d) { return  x( getX(d) ); })
-  //     .attr("y2", function(d) { return height*0.5; });
+  line_foodtype = svg.selectAll("line")
+      .data(text_foodtype)
+    .enter().append("line")
+      .attr("class", "line2")
+      .attr("stroke", "rgba(255,255,255,0.35)")
+      .style("stroke-dasharray", ("1, 3")) 
+      .attr("x1", function(d) { return  x2( getX2(d) ); })
+      .attr("y1", function(d) { return  y2(getY2(d)) - 90; })
+      .attr("x2", function(d) { return  x2( getX2(d) ); })
+      .attr("y2", function(d) { return  y2(getY2(d)); });
 }
 
 

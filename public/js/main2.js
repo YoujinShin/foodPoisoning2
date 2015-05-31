@@ -10,6 +10,7 @@ $('.cuisine').click(function() {
 	$('.guide_cuisine').css('visibility', 'visible');
 	$('.line').css('visibility', 'visible');
 	$('.guide_foodtype').css('visibility', 'hidden');
+	$('.line2').css('visibility', 'hidden');
 
 	svg.selectAll("circle").each(function(e) {
 
@@ -32,6 +33,7 @@ $('.foodtype').click(function() {
 	$('.guide_cuisine').css('visibility', 'hidden');
 	$('.line').css('visibility', 'hidden');
 	$('.guide_foodtype').css('visibility', 'visible');
+	$('.line2').css('visibility', 'visible');
 
 	svg.selectAll("circle").each(function(e) {
 
